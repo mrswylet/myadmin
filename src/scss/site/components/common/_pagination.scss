@@ -1,0 +1,57 @@
+//Стили пагинации
+.pagination{
+	&__container{
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	&__list {
+		display: flex;
+	}
+	&__prev,
+	&__page,
+	&__next,
+	&__other{
+		background-color: $white;
+		border: 1px $gray-250 solid;
+		padding: 9px 17px;
+		border-right: none;
+		font-weight: 300;
+		&:first-child{
+			border-top-left-radius: $border-radius;
+			border-bottom-left-radius: $border-radius;
+		}
+		&:last-child{
+			border-right: 1px $gray-250 solid;
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+	&__other{
+		cursor: default;
+	}
+	&__prev,
+	&__page,
+	&__next{
+		cursor: pointer;
+		&:hover,
+		&.active {
+			background-color: $primary;
+			color: $white;
+			border-top: none;
+			border-bottom: none;
+
+		}
+	}
+	&__perpage{
+		&-container{
+			width: 144px;
+			margin-left: 30px;
+		}
+		&-select{
+			border: 1px $gray-250 solid;
+			padding: 9px 17px;
+			border-right: $border-radius;
+		}
+	}
+}

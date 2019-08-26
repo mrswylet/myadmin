@@ -1,0 +1,15 @@
+.delivery-map{
+	.switch-group{
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+	h2{
+		display: inline;
+	}
+	&__map{
+		height: 500px;
+		background-color: $gray-100;
+		margin: 25px 0 30px;
+	}
+}

@@ -1,0 +1,202 @@
+.help{
+	position: fixed;
+	right: 25px;
+	bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	button{
+		> div{
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+		}
+		background-color: $gray-700;
+		border-radius: 25px;
+		color: $white;
+		padding: 13px 18px;
+		font-size: 16px;
+		border: none;
+		width: 50px;
+		transition: width .25s;
+		cursor: pointer;
+		margin-top: 15px;
+		&:hover{
+			text-decoration: none;
+			color: $white;
+			transition: width .25s;
+		}
+		i{
+			margin-right: 10px;
+			transition: margin-right .25s;
+		}
+	}
+	&__manager:hover{
+		width: 203px;
+	}
+	&__help:hover{
+		width: 126px;
+	}
+	&__feedback:hover{
+		width: 181px;
+	}
+}
+
+#help-container{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .8);
+	z-index: 10;
+	display: none;
+}
+.help-panel{
+	background-color: $white;
+	//box-shadow: 0px 1px 20px 0px rgba(151, 151, 151, 0.4);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	transition: .25s right;
+	z-index: 10;
+	&_help{
+		width: $help-panel-help-width;
+		right: $help-panel-help-closed;
+	}
+	&_manager{
+		width: $help-panel-manager-width;
+		right: $help-panel-manager-closed;
+	}
+	&.open{
+		right: $help-panel-open;
+		transition: .25s right;
+	}
+	&__title{
+		border-bottom: 1px $gray-500 solid;
+		position: relative;
+		height: 60px;
+		padding: 1px 100px 1px 30px;
+		h1 {
+			margin-top: 18px;
+		}
+	}
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 10px;
+		width: 59px;
+		height: 59px;
+		border: none;
+		background-color: transparent;
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 2px;
+			background-color: #333;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		&:before{ transform: translate(-50%, -50%) rotate(45deg); }
+		&:after { transform: translate(-50%, -50%) rotate(-45deg); }
+	}
+	&__one {
+		border-bottom: 1px $gray-250 solid;
+		padding: 30px;
+		&-description{
+			margin-top: 15px;
+		}
+		&-img{
+			margin-top: 20px;
+		}
+	}
+	&__list{
+		padding: 30px;
+		ul{
+			padding-left: 20px;
+			list-style: none;
+			margin-top: 15px;
+		}
+	}
+	&__item{
+		span{
+			color: $primary;
+			border-bottom: 1px $primary dashed;
+			cursor: pointer;
+			position: relative;
+			i{
+				position: absolute;
+				left: -20px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: $body-color;
+			}
+		}
+		&-description{
+			margin-top: 20px;
+			margin-left: -20px;
+			display: none;
+			margin-bottom: 30px;
+		}
+		p{
+			margin-left: 20px;
+		}
+		&-img{
+			margin-top: 10px;
+		}
+	}
+	&_manager{
+		&-personal{
+			padding: 30px 30px 0 30px;
+			img{
+				display: block;
+				margin: auto;
+				border-radius: 50%;
+			}
+			span{
+				display: block;
+				text-align: center;
+				margin-top: 20px;
+				font-size: 16px;
+				font-weight: 700;
+				color: $gray-850;
+			}
+		}
+		&-box {
+			padding: 30px 30px 0 30px;
+			&:last-child{
+				padding-bottom: 30px;
+			}
+			&-title{
+				font-size: 1.15rem;
+				font-weight: $font-weight-normal;
+				color: $gray-500;
+			}
+			ul{
+				margin-top: 20px;
+				padding: 0;
+				list-style: none;
+				li{
+					padding-left: 20px;
+					position: relative;
+					margin-top: 20px;
+					i{
+						position: absolute;
+						top: 0;
+						left: 0;
+						line-height: 1.5rem;
+						color: $primary;
+					}
+					p {
+						margin-bottom: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+}

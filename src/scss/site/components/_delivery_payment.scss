@@ -1,0 +1,60 @@
+.payment-panel,
+.delivery-panel{
+	.panel-hr{
+		margin-bottom: 0;
+	}
+}
+.del-pay{
+	&__add-item{
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+	&__item {
+		margin: 0 -30px;
+		position: relative;
+		border-bottom: 1px $gray-250 solid;
+		padding: 30px 30px 30px 50px;
+		background-color: $white;
+		&:before {
+			font-family: "Material-Design-Iconic-Font";
+			font-style: normal;
+			font-weight: normal;
+			content: '\f30c';
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			color: $primary;
+			font-size: 16px;
+		}
+		> span{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			display: block;
+		}
+		&-placeholder{
+			background-color: $gray-100;
+			margin: 0 -30px;
+			height: 125px;
+		}
+	}
+	&__control {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		display: flex;
+		> :nth-child(2) {
+			margin: 0 30px;
+		}
+	}
+	&__conditions{
+		position: relative;
+		margin-top: 30px;
+		.btn-edit{
+			position: absolute;
+			top: -22px;
+			right: 0;
+		}
+	}
+}

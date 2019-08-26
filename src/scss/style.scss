@@ -1,0 +1,51 @@
+//core
+@import 'bootstrap';
+
+@import "site/core/variables";
+
+@import "site/core/root-grid";
+@import "site/core/header";
+@import "site/core/main-menu";
+@import "site/core/body";
+
+
+
+//@import "site/core/base-admin";
+//@import "site/core/page";
+
+
+////components common
+//@import "site/core/components/common/main-table";
+//@import "site/core/components/common/forms";
+//@import "site/core/components/common/times";
+//@import "site/core/components/common/notify";
+//@import "site/core/components/common/general";
+//@import "site/core/components/common/comments";
+//@import "site/core/components/common/pagination";
+//@import "site/core/components/common/chart";
+//@import "site/core/components/common/btn";
+//
+////components
+//@import "site/core/components/reviews";
+//@import "site/core/components/help";
+//@import "site/core/components/branches";
+//@import "site/core/components/branches_create";
+//@import "site/core/components/organization_information";
+//@import "site/core/components/review";
+//@import "site/core/components/materials";
+//@import "site/core/components/materials_create";
+//@import "site/core/components/cashbacks";
+//@import "site/core/components/cashbacks_create";
+//@import "site/core/components/analytics";
+//@import "site/core/components/profile_setting";
+//@import "site/core/components/clients";
+//@import "site/core/components/client";
+//@import "site/core/components/orders";
+//@import "site/core/components/order";
+//@import "site/core/components/products";
+//@import "site/core/components/sale_settings";
+//@import "site/core/components/options";
+//@import "site/core/components/delivery_payment";
+//@import "site/core/components/delivery_create";
+//@import "site/core/components/_options.scss";
+//@import "site/core/components/integrations.scss";

@@ -1,0 +1,35 @@
+.panel.personal-data{
+	h2{
+		margin-bottom: 5px;
+	}
+	span{
+		margin-bottom: 18px;
+		display: block;
+		color: $gray-600;
+		font-size: 12px;
+	}
+}
+.panel.signin-options{
+	.label{
+		display: block;
+	}
+}
+.panel.email-notifications{
+	.switch-group{
+		position: absolute;
+		top: 30px;
+		margin: 0;
+		right: 30px;
+	}
+	h2{
+		margin-bottom: 5px;
+	}
+	.main-table{
+		&.off{
+			display: none;
+		}
+		&__item{
+			padding-bottom: 15px;
+		}
+	}
+}

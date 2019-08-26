@@ -1,0 +1,62 @@
+.panel-filter{
+	margin-bottom: 30px;
+}
+.datarow {
+
+	.panel-body {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	&__box {
+		min-width: 250px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: $grid-gutter-width;
+		line-height: 1.2rem;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			width: 1px;
+			background-color: $gray-250;
+		}
+
+		&:first-child {
+			padding-left: ($grid-gutter-width / 2);
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.datarow__box-title {
+			font-size: 14px;
+			font-weight: $font-weight-light;
+			color: $gray-500;
+			margin-bottom: 15px;
+		}
+
+		&-content {
+
+			&-value {
+				display: block;
+				margin-bottom: 0;
+				font-size: 22px;
+				font-weight: $font-weight-normal;
+				color: $gray-900;
+			}
+
+			&-link {
+				font-size: 13px;
+				margin-top: 20px;
+				display: block;
+			}
+		}
+	}
+}

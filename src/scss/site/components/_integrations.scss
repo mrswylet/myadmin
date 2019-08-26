@@ -1,0 +1,208 @@
+.integrations {
+	&-import {
+		&-settings{
+			&__type{
+				> span{
+					margin-bottom: 15px;
+					display: block;
+				}
+				.custom-radio {
+					margin-bottom: 15px;
+				}
+				> small{
+					margin-bottom: 20px;
+					display: block;
+				}
+			}
+			&__input{
+				margin-top: 18px;
+				margin-bottom: 10px;
+				label{
+					margin: 0;
+				}
+				.input-group-prepend {
+					.btn{
+						line-height: 1.5;
+						background-color: $primary;
+						border-color: $primary;
+						/*&:before{
+							display: inline-block;
+							content: '\f220';
+							margin-right: 10px;
+							font-family: "Material-Design-Iconic-Font";
+							font-style: inherit;
+							font-weight: inherit;
+							line-height: inherit;
+							color: inherit;
+						}*/
+					}
+				}
+			}
+			&__settings{
+				.btn-popup-link{
+					position: relative;
+					&:after{
+						display: block;
+						font-family: "Material-Design-Iconic-Font";
+						font-style: inherit;
+						font-weight: inherit;
+						font-size: inherit;
+						line-height: inherit;
+						position: absolute;
+						top: 50%;
+						right: -17px;
+						transform: translateY(-50%);
+						transition: .25s margin-bottom;
+					}
+					&.closed{
+						margin-bottom: 0px;
+						transition: .25s margin-bottom;
+						&:after{
+							content: '\f2f9';
+						}
+					}
+					&.open{
+						margin-bottom: 20px;
+						transition: .25s margin-bottom;
+						&:after{
+							content: '\f2fc';
+						}
+					}
+				}
+				&-container{
+					> .row{
+						margin-bottom: 50px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+			&__item{
+				margin-bottom: 50px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&-title{
+					margin-bottom: 20px;
+					display: block;
+				}
+				.custom-checkbox {
+					margin-bottom: 10px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				.custom-radio{
+					margin-bottom: 10px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		&-log {
+
+			.import-log {
+				&-data {
+					&__main {
+						strong {font-weight: $font-weight-base;}
+					}
+
+					&__extended {
+						.import-log {
+							&-success {
+								i {color: $green;}
+							}
+							&-error {
+								i {color: $red;}
+							}
+						}
+					}
+
+				}
+			}
+		}
+
+		&-examples {
+			.main-table__header {
+				min-height: auto;
+				padding-top: 0;
+				padding-bottom: 5px;
+			}
+			.main-table__body > :last-child {
+				margin-bottom: -25px;
+			}
+		}
+	}
+	&-export{
+		.btn-export{
+			margin-bottom: 20px;
+		}
+		&__settings{
+			.btn-popup-link{
+				position: relative;
+				&:after{
+					display: block;
+					font-family: "Material-Design-Iconic-Font";
+					font-style: inherit;
+					font-weight: inherit;
+					font-size: inherit;
+					line-height: inherit;
+					position: absolute;
+					top: 50%;
+					right: -17px;
+					transform: translateY(-50%);
+					transition: .25s margin-bottom;
+				}
+				&.closed{
+					margin-bottom: 0px;
+					transition: .25s margin-bottom;
+					&:after{
+						content: '\f2f9';
+					}
+				}
+				&.open{
+					margin-bottom: 20px;
+					transition: .25s margin-bottom;
+					&:after{
+						content: '\f2fc';
+					}
+				}
+			}
+			&-container{
+				> .row{
+					margin-bottom: 50px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		&__item{
+			margin-bottom: 50px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&-title{
+				margin-bottom: 20px;
+				display: block;
+			}
+			.custom-checkbox {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			.custom-radio{
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+

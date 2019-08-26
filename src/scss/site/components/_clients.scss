@@ -1,0 +1,32 @@
+.clients {
+	&__filter{
+		&-cashbacks{
+			width: 220px;
+		}
+		&-clients{
+			width: 470px;
+		}
+		&-date{
+			width: 300px;
+		}
+	}
+	&__table{
+		&-cashback{
+			&-img{
+				width: 16px;
+				height: 16px;
+				border-radius: $border-radius;
+				display: inline-block;
+				margin-right: 10px;
+				overflow: hidden;
+				vertical-align: middle;
+				img{
+					height: 100%;
+					display: block;
+					margin: auto;
+				}
+			}
+			> span {vertical-align: middle;}
+		}
+	}
+}

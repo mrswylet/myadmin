@@ -1,0 +1,47 @@
+.btn{
+	&-link,
+	&-remove,
+	&-edit {
+		padding: 0;
+		border: none;
+		background-color: transparent;
+	}
+	&-remove,
+	&-edit {
+		color: $gray-560;
+		text-decoration: none;
+		&:hover{
+			color: $gray-700;
+			text-decoration: none;
+		}
+		&:before{
+			display: inline;
+			font-family: "Material-Design-Iconic-Font";
+			font-style: normal;
+			font-weight: normal;
+		}
+		span{
+			margin-left: 10px;
+		}
+	}
+	&-remove:before{
+		content: '\f154';
+	}
+	&-edit:before{
+		content: '\f158';
+	}
+	&-link{
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+		&.event{
+			text-decoration: none;
+			border-bottom: 1px $link-color dashed;
+			&:hover{
+				border-bottom: 1px transparent dashed;
+			}
+		}
+
+	}
+}

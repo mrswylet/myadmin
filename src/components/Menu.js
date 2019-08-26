@@ -6,10 +6,13 @@ function Menu(props) {
 	const menuKeys = Object.keys(menuList);
 
 	const listItems = menuKeys.map((menuKey) =>
-		<MenuItem itemKey={menuKey} itemList={menuList[menuKey]}/>
+		<MenuItem key={menuKey} itemKey={menuKey} itemList={menuList[menuKey]}/>
 	);
 
-	return listItems
+	return (
+		<div className='main-menu'>
+			{listItems}
+		</div>)
 }
 
 /**
@@ -33,7 +36,7 @@ function SubMenu(props) {
 	const sublist = props.subMenuList;
 
 	const listItems = sublist.map((item) =>
-		<li>{item}</li>
+		<li key={item}>{item}</li>
 	);
 
 	return (<ul>{listItems}</ul>)

@@ -1,0 +1,45 @@
+//Стили графиков
+.graph {
+
+	&-wrapper {
+		margin: 0 auto;
+	}
+
+	&-doughnut {
+		.graph-wrapper {
+			max-width: 140px;
+		}
+	}
+
+	// // Legend
+	.legend {
+		margin-top: 30px;
+
+		&__item {
+			margin-bottom: 7px;
+
+			&-label {
+				position: relative;
+				padding-left: ($grid-gutter-width / 2) + 26px;
+
+				i {
+					position: absolute;
+					top: 3px;
+					left: ($grid-gutter-width / 2);
+					width: 16px;
+					height: 16px;
+					border-radius: $border-radius;
+				}
+			}
+
+			&-item {
+
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,36 @@
+.cashbacks{
+	&__column{
+		&-left {
+			width: calc(100% - 375px);
+		}
+		&-right {
+			width: 375px;
+		}
+	}
+	&-panel-client{
+		h2{
+			margin-bottom: 0;
+		}
+	}
+	&-panel-img{
+		h2{
+			i.zmdi.zmdi-help{
+				font-size: 14px;
+				color: $primary;
+			}
+		}
+	}
+	&__table{
+		&-ava{
+			height: 36px;
+			width: 36px;
+			border-radius: 50%;
+			overflow: hidden;
+			text-align: center;
+			img{
+				height: 100%;
+				display: inline-block;
+			}
+		}
+	}
+}

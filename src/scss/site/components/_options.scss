@@ -1,0 +1,68 @@
+.options-create{
+	&__addinput {
+		.form-group:last-child {margin-bottom: 0}
+	}
+	&__addbtn {
+		margin-top: 25px;
+	}
+	&__category {
+		.switch-group{
+			position: absolute;
+			top: 30px;
+			right: 30px;
+		}
+	}
+	&__values ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		height: 36px;
+		background-color: $white;
+		cursor: grab;
+		position: relative;
+		padding-left: 20px;
+		&:before,
+		&-remove{
+			font-family: 'Material-Design-Iconic-Font';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+		}
+		&:before{
+			content: '\f30c';
+			color: $primary;
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
+		&-remove{
+			margin-left: auto;
+			border: none;
+			background-color: $white;
+			color: $gray-500;
+			padding-left: 0;
+			padding-right: 10px;
+			&:hover{
+				color: $gray-700;
+			}
+			&:active{
+				padding-left: 0;
+				padding-right: 10px;
+			}
+			&:after{
+				content: '\f154';
+			}
+		}
+		&-placeholder{
+			background-color: $gray-100;
+			height: 36px;
+			width: 100%;
+		}
+	}
+}

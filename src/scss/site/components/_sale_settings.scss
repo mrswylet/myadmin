@@ -1,0 +1,14 @@
+.sale-settings__general {
+	&-item {
+		position: relative;
+		.switch-group {
+			margin: 0;
+			top: 0;
+			right: 0;
+			position: absolute;
+		}
+	}
+	&-container {
+		margin-top: 15px;
+	}
+}

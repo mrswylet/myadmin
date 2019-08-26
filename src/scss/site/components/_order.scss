@@ -1,0 +1,69 @@
+$width-order-client: 375px;
+$width-order-inform: calc(100% - #{$width-order-client});
+
+.order{
+	&-status, &-payment {
+		.form-group:last-child {margin-bottom: 0;}
+	}
+	&-basket{
+		&__img-box {
+			width: 64px;
+			height: 64px;
+			overflow: hidden;
+			border-radius: $border-radius;
+			position: relative;
+			img{
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		&__orders-box {
+			display: flex;
+			align-items: center;
+			input{
+				width: 40px;
+				text-align: center;
+			}
+			span{
+				margin-left: 15px;
+			}
+		}
+		.btn-remove{
+			font-size: 16px;
+		}
+		.table-main__cell{
+			vertical-align: middle;
+		}
+	}
+	&-inform{
+		width: $width-order-inform;
+	}
+	&-client{
+		width: $width-order-client;
+	}
+	&-delivery{
+		.btn-edit{
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			font-size: 13px;
+		}
+		&__type {
+			margin-bottom: 20px;
+		}
+		&__item{
+			font-weight: 400;
+			margin-top: 11px;
+			span{
+				font-weight: 300;
+			}
+		}
+	}
+ &-history{
+	 .main-table__header {
+		 min-height: 30px;
+	 }
+ }
+}

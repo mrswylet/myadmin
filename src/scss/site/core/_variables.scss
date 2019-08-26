@@ -1,0 +1,35 @@
+$header-height: 65px;
+
+$menubar-width: 270px;
+
+$page-width: calc(100% - #{$menubar-width});
+$page-min-width: calc(1000px - #{$menubar-width});
+
+$page-title-top: $header-height;
+$page-title-left: $menubar-width;
+$page-title-width: $page-width;
+$page-title-height: 60px;
+
+
+//switch
+$switch-width: 35px;
+$switch-height: 18px;
+$switch-border-radius: $switch-height / 2;
+$switch-after-width: $switch-height;
+$switch-after-height: $switch-height;
+$switch-on-left: $switch-width - $switch-after-width;
+
+
+//custom-checkbox
+$custom-checkbox-width: 18px;
+$custom-checkbox-height: 18px;
+
+
+//help panels
+$help-panel-open: 0px;
+
+$help-panel-help-width: 610px;
+$help-panel-help-closed: -$help-panel-help-width;
+
+$help-panel-manager-width: 385px;
+$help-panel-manager-closed: -$help-panel-manager-width;

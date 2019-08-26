@@ -1,0 +1,83 @@
+.organization-panel-gallery{
+	h2{
+		margin-bottom: 5px;
+	}
+	p{
+		margin-bottom: 25px;
+	}
+}
+.list-gallery{
+	margin-bottom: -30px;
+}
+.col-gallery {
+	position: relative;
+	width: 50%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+	@media (min-width: 768px) {
+		width: 50%;
+	}
+	@media (min-width: 992px) {
+		width: 33.33333%;
+	}
+	@media (min-width: 1500px) {
+		width: 20%;
+	}
+}
+.panel-contacts{
+	.vue-mail{
+		position: relative;
+		padding-left: 28px;
+		margin-top: 30px;
+		.custom-checkbox{
+			position: absolute;
+			left: 0;
+			top: 4px;
+		}
+	}
+}
+.other-links{
+	&__disc{
+		margin-top: 26px;
+	}
+	&__item{
+		label{
+			i{
+				margin-left: 3px;
+				color: $primary;
+			}
+		}
+		&-remove{
+			top: 37px;
+			cursor: pointer;
+			display: inline-block;
+			font: normal normal normal 19px/1 Material-Design-Iconic-Font;
+			text-rendering: auto;
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			color: $gray-560;
+		}
+	}
+}
+.organization-panel-contacts{
+	.view-mail{
+		display: flex;
+		align-items: center;
+		@media(min-width: 1789px) {
+			margin-top: 32px;
+		}
+		//@media(min-width: 1789px) {
+			margin-top: 22px;
+		//}
+		.custom-checkbox{
+			min-width: 18px;
+			margin-right: 10px;
+		}
+		p{
+			margin: 0;
+		}
+	}
+}

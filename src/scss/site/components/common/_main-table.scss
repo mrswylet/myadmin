@@ -1,0 +1,294 @@
+
+.table-main {
+	&__container{
+		margin: 0 -30px;
+		overflow: auto;
+		width: calc(100% + 60px);
+	}
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+	&__header{
+		display: table-header-group;
+		.table-main__row{
+			border-bottom: 1px $gray-500 solid;
+		}
+		&-title{
+			color: $gray-500;
+			font-weight: $font-weight-normal;
+		}
+		&-sort {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			.sort-btn {
+				padding: 10px 1px 10px 10px;
+				cursor: pointer;
+				span {
+					width: 0;
+					height: 0;
+					border-left: 3.5px solid transparent;
+					border-right: 3.5px solid transparent;
+					display: block;
+				}
+				.up {
+					border-bottom: 4px solid $gray-450;
+					margin-bottom: 2px;
+				}
+				.down {
+					border-top: 4px solid $gray-450;
+					margin-top: 2px;
+				}
+				&.up {
+					.up {
+						border-bottom: 4px solid $gray-850;
+					}
+				}
+				&.down {
+					.down {
+						border-top: 4px solid $gray-850;
+					}
+				}
+			}
+		}
+	}
+	&__body{
+		display: table-row-group;
+		.table-main__row{
+			&:last-child{
+				border: none;
+			}
+		}
+	}
+	&__row{
+		display: table-row;
+		border-bottom: 1px $gray-250 solid;
+		&.center{
+			> *{
+				vertical-align: middle;
+			}
+		}
+		&.top{
+			> *{
+				vertical-align: top;
+			}
+		}
+	}
+	&__cell{
+		display: table-cell;
+		padding: 15px 15px 15px 20px;
+		&:first-child{
+			padding-left: 30px;
+		}
+		&:last-child{
+			padding-right: 30px;
+		}
+		a{
+			color: $link-color;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		.dropdown{
+			text-align: right;
+			&-toggle{
+				/*todo это нужно потом убрать, это стили нудно просисать в bootstrap, создав новый клас кнопок btn-outline-dropdown*/
+				width: 130px;
+				text-align: left;
+				position: relative;
+				color: $body-color;
+				@media (min-width: map-get($grid-breakpoints, "xl")) {
+					width: 130px;
+				}
+				&:after{
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 10px;
+				}
+			}
+			&-menu{
+				min-width: 100%;
+				margin-left: -8px;
+				font-size: $font-size-sm;
+				.dropdown-item{
+					color: $gray-900;
+					text-decoration: none;
+					padding-right: $btn-padding-x;
+					padding-left: $btn-padding-x;
+				}
+				@media (min-width: map-get($grid-breakpoints, "xl")) {
+					min-width: 130px;
+				}
+			}
+		}
+		.other-time{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			display: block;
+			//margin: auto;
+			&_true{
+				background-color: $success;
+			}
+			&_false{
+				background-color: $secondary;
+			}
+		}
+		.load-img{
+			margin: 0;
+		}
+	}
+}
+.list-filter{
+	margin-bottom: 10px;
+}
+/*.main-table{
+	&__header{
+		min-height: 60px;
+		margin-left: -30px;
+		margin-right: -30px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px $gray-500 solid;
+		&-title{
+			color: $gray-500;
+			font-weight: $font-weight-normal;
+		}
+		&-sort{
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			.sort-btn {
+				padding: 10px 1px 10px 10px;
+				cursor: pointer;
+				span{
+					width: 0;
+					height: 0;
+					border-left: 3.5px solid transparent;
+					border-right: 3.5px solid transparent;
+					display: block;
+				}
+				.up{
+					border-bottom: 4px solid $gray-450;
+					margin-bottom: 2px;
+				}
+				.down {
+					border-top: 4px solid $gray-450;
+					margin-top: 2px;
+				}
+				&.up{
+					.up{
+						border-bottom: 4px solid $gray-850;
+					}
+				}
+				&.down{
+					.down{
+						border-top: 4px solid $gray-850;
+					}
+				}
+			}
+		}
+	}
+	&__body{
+		> .ajax-loader{
+			margin-left: -30px;
+			width: calc(100% + 60px);
+		}
+		> *:last-child{
+		 border-bottom: none;
+	 }
+	}
+	&__item {
+		min-height: 56px;
+		border-bottom: 1px $gray-250 solid;
+		margin-left: -30px;
+		margin-right: -30px;
+		padding: 15px 15px 20px;
+
+		a{
+			color: $link-color;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		.dropdown{
+			text-align: right;
+			&-toggle{
+				!*todo это нужно потом убрать, это стили нудно просисать в bootstrap, создав новый клас кнопок btn-outline-dropdown*!
+				width: 130px;
+				text-align: left;
+				position: relative;
+				color: $body-color;
+				@media (min-width: map-get($grid-breakpoints, "xl")) {
+					width: 130px;
+				}
+				&:after{
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 10px;
+				}
+			}
+			&-menu{
+				min-width: 100%;
+				margin-left: -8px;
+				font-size: $font-size-sm;
+				.dropdown-item{
+					color: $gray-900;
+					text-decoration: none;
+					padding-right: $btn-padding-x;
+					padding-left: $btn-padding-x;
+				}
+				@media (min-width: map-get($grid-breakpoints, "xl")) {
+					min-width: 130px;
+				}
+			}
+		}
+		.other-time{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			display: block;
+			//margin: auto;
+			&_true{
+				background-color: $success;
+			}
+			&_false{
+				background-color: $secondary;
+			}
+		}
+		.load-img{
+			margin: 0;
+		}
+	}
+}*/
+
+
+//стили на ширину колонок
+@for $i from 1 through 30 {
+	.w-#{$i*10}px { min-width: 10px * $i; max-width: 10px * $i; }
+}
+@media (min-width: 900px) {
+	@for $i from 1 through 30 {
+		.w-sm-#{$i*10}px { min-width: 10px * $i; max-width: 10px * $i; }
+	}
+}
+@media (min-width: 1200px) {
+	@for $i from 1 through 30 {
+		.w-md-#{$i*10}px { min-width: 10px * $i; max-width: 10px * $i; }
+	}
+}@media (min-width: 1500px) {
+	@for $i from 1 through 30 {
+		.w-lg-#{$i*10}px { min-width: 10px * $i; max-width: 10px * $i; }
+	}
+}
+@media (min-width: 1800px) {
+	@for $i from 1 through 30 {
+		.w-xl-#{$i*10}px { min-width: 10px * $i; max-width: 10px * $i; }
+	}
+}

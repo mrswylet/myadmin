@@ -1,0 +1,13 @@
+.material{
+	&__column{
+		&-left{
+			width: calc(100% - 375px);
+		}
+		&-right{
+			width: 375px;
+		}
+	}
+	&-img {
+		margin: 0 0 15px;
+	}
+}

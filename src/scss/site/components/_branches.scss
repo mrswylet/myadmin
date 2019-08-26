@@ -1,0 +1,16 @@
+.branches{
+	&__empty-page{
+		text-align: center;
+		padding-top: 140px;
+		h4 {
+			font-size: 18px;
+			font-weight: 700;
+			color: $gray-700;
+		}
+		p {
+			font-size: 14px;
+			font-weight: 300;
+			color: $gray-600;
+		}
+	}
+}

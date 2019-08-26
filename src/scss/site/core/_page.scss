@@ -1,0 +1,164 @@
+#page__title{
+	position: fixed;
+	top: $page-title-top;
+	left: $page-title-left;
+	right: 0;
+	width: $page-title-width;
+	height: $page-title-height;
+	border-top-left-radius: 5px;
+	background-color: $white;
+	padding-left: 30px;
+	padding-right: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0px 1px 2px 0px rgba(217, 217, 217, 0.2);
+	z-index: 1;
+	h1{
+		margin: 0;
+	}
+	.btn{
+		margin-left: 30px;
+	}
+}
+#page__container{
+	height: calc(100% - 60px);
+	padding: 30px;
+	overflow: auto;
+	margin-top: $page-title-height;
+}
+.page{
+	/*display: flex;
+	flex-direction: column;*/
+	width: $page-width;
+	border-top-left-radius: 5px;
+	background-color: $gray-100;
+	position: relative;
+	min-width: $page-min-width;
+
+	/*position: fixed;
+	right: 0;
+	left: 260px;
+	top: 65px;
+	bottom: 0;*/
+	&__container{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	&-content {
+		flex-grow: 1;
+		.panel {
+			margin-bottom: 0;
+		}
+	}
+	&-header {
+		margin-top: 15px;
+		margin-bottom: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		h1 {
+			margin: 0;
+		}
+	}
+}
+
+.row-action {
+	position: relative;
+	padding-right: 30px;
+}
+.col-action {
+	position: absolute;
+	right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-footer {
+	justify-content: flex-end;
+}
+
+
+.global-btns {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	a {
+		margin: 0 5px;
+	}
+	a:first-of-type {
+		margin-left: 0;
+	}
+	a:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.page h3 {
+	margin-top: 15px !important;
+	margin-bottom: 10px;
+}
+
+//Стили вкладок
+.tabs-page__nav {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	border-bottom: 1px solid #e4eaec;
+}
+
+.tabs-page__nav-elemet {
+	margin-bottom: -1px;
+}
+
+.tabs-page__nav-elemet a {
+	color: #76838f;
+	padding: .715rem 1.072rem;
+	border-top-right-radius: 0.215rem;
+	border-top-left-radius: 0.215rem;
+	text-decoration: none;
+	display: block;
+	border-bottom: 2px transparent solid;
+	transition-property: color, border-bottom-color;
+	transition-duration: 0.25s;
+	transition-timing-function: ease;
+}
+
+.tabs-page__nav-elemet a:hover {
+	border-bottom: 2px #ccd5db solid;
+	text-decoration: none;
+}
+
+.tabs-page__nav-elemet a.active {
+	color: rgba(255, 103, 0, .9);
+	border-bottom: 2px rgba(255, 103, 0, .9) solid;
+}
+
+.tabs-page__container {
+	margin-top: 30px;
+}
+

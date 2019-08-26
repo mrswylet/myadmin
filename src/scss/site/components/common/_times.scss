@@ -1,0 +1,53 @@
+.work-time{
+	&__item{
+		&:last-child {
+			.form-group {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__days{
+		justify-content: space-between;
+		width: 290px;
+	}
+	&__time {
+		display: flex;
+		align-items: center;
+	}
+	&__btn-round{
+		margin-left: 10px;
+		display: inline-block;
+		font: normal normal normal 19px/1 'Material-Design-Iconic-Font';
+		text-rendering: auto;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		color: $gray-560;
+		cursor: pointer;
+		transition: 0.25s color;
+		&:hover{
+			color: $gray-700;
+		}
+		&.on{
+			color: $primary;
+			transition: 0.25s color;
+		}
+		&.on:hover{
+			color: $primary;
+			transition: 0.25s color;
+		}
+	}
+	&__remove-item{
+		display: inline-block;
+		font: normal normal normal 19px/1 'Material-Design-Iconic-Font';
+		text-rendering: auto;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		color: $gray-560;
+		margin-top: 35px;
+		&:hover{
+			color: $gray-700;
+		}
+	}
+}
