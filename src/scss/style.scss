@@ -1,12 +1,15 @@
 //core
-@import 'bootstrap';
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/utilities";
 
-@import "site/core/variables";
+@import "core/variables";
 
-@import "site/core/root-grid";
-@import "site/core/header";
-@import "site/core/main-menu";
-@import "site/core/body";
+@import "core/root-grid";
+@import "core/header";
+@import "core/main-menu";
+@import "core/body";
 
 
 
