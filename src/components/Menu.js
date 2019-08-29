@@ -1,18 +1,40 @@
 import React from "react";
+import axios from 'axios';
 
-function Menu(props) {
-	const menuList = props.menuList;
+class Menu extends React.Component {
+	constructor(props) {
+		super(props);
 
-	const menuKeys = Object.keys(menuList);
+		this.state = {
+			menu_list: []
+		}
+	}
 
-	const listItems = menuKeys.map((menuKey) =>
-		<MenuItem key={menuKey} itemKey={menuKey} itemList={menuList[menuKey]}/>
-	);
+	render() {
+		const menu_list = this.state.menu_list;
 
-	return (
-		<div className='main-menu'>
-			{listItems}
-		</div>)
+		if (menu_list.length !== 0) {
+			const listItems = menu_list.map((current_item, index, array) =>
+				<MenuItem key={current_item.title} menuItem={current_item}/>
+			);
+			return (
+				<div className='main-menu'>
+					{listItems}
+				</div>
+			)
+		} else {
+			return (
+				<div className='main-menu'>Загрузка данных</div>
+			)
+		}
+	}
+
+	async componentDidMount() {
+		let response = await axios.get('/server/mainMenu.json');
+		const menu_list = response.data;
+
+		this.setState({menu_list})
+	}
 }
 
 /**
@@ -22,24 +44,30 @@ function Menu(props) {
  * @constructor
  */
 function MenuItem(props) {
-	const key = props.itemKey;
-	const list = props.itemList;
+	const menu_item = props.menuItem;
 	return (
-		<div className='menu__item'>
-			<div className="menu__title">{key}</div>
-			<SubMenu subMenuList={list}/>
+		<div className="main-menu__section">
+			<div className="main-menu__header">
+				{menu_item.icon ? (<span className=".main-menu__icon">i</span>) : ''}
+				<span className="main-menu__title">{menu_item.title}</span>
+				<span className="badge badge-pill badge-success main-menu__badge">{menu_item.badge}</span>
+			</div>
+			<Sublist subMenuList={menu_item.submenu}/>
 		</div>
 	)
 }
 
-function SubMenu(props) {
+function Sublist(props) {
 	const sublist = props.subMenuList;
 
-	const listItems = sublist.map((item) =>
-		<li key={item}>{item}</li>
+	const listItems = sublist.map((current_item, index, array) =>
+		<li className="main-menu__item" key={current_item.title}>
+			<a href={current_item.href} className="main-menu__link" title={current_item.title}>{current_item.title}</a>
+			<span className="badge badge-pill badge-success main-menu__badge">{current_item.badge}</span>
+		</li>
 	);
 
-	return (<ul>{listItems}</ul>)
+	return (<ul className="main-menu__sublist">{listItems}</ul>)
 }
 
 export default Menu;

@@ -1,0 +1,62 @@
+.main-menu {
+	grid-area: nav;
+	background-color: $secondary;
+	color: $white;
+
+	&__section {
+		&:last-child {
+			padding-bottom: 40px;
+		}
+	}
+
+	&__header {
+		padding-left: 55px;
+		padding-right: 15px;
+		height: 42px;
+		display: flex;
+		align-items: center;
+		background-color: $gray-800;
+		color: $white;
+	}
+
+	&__icon {
+
+	}
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__sublist {
+		margin: 0;
+		padding: 3px 0;
+		list-style: none;
+	}
+
+	&__item {
+
+	}
+
+	&__link {
+		padding-left: 60px;
+		padding-right: 15px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		color: $white;
+		text-decoration: none;
+		background-color: transparent;
+		transition: background-color .25s;
+
+		&:hover {
+			background-color: $gray-800;
+			transition: background-color .25s;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+
+	&__badge {
+		margin-left: 10px;
+	}
+}

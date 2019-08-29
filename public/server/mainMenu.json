@@ -1,0 +1,105 @@
+[
+	{
+		"title": "Мониторинг",
+		"icon": "",
+		"badge": "",
+		"submenu": [
+			{
+				"title": "Клиенты",
+				"href": "/clients",
+				"badge": ""
+			},
+			{
+				"title": "Заказы",
+				"href": "/orders",
+				"badge": "2"
+			},
+			{
+				"title": "Отзывы",
+				"href": "/reviews",
+				"badge": "3"
+			},
+			{
+				"title": "Аналитика",
+				"href": "/analytics",
+				"badge": ""
+			}
+		]
+	},
+	{
+		"title": "Организация",
+		"icon": "",
+		"badge": "",
+		"submenu": [
+			{
+				"title": "Информация и реквизиты",
+				"href": "/organization",
+				"badge": ""
+			},
+			{
+				"title": "Филиалы",
+				"href": "/branches",
+				"badge": ""
+			},
+			{
+				"title": "Новости и акции",
+				"href": "/materials",
+				"badge": ""
+			},
+			{
+				"title": "Уровни кэшбека",
+				"href": "/cashbacks",
+				"badge": ""
+			}
+		]
+	},
+	{
+		"title": "Продажи",
+		"icon": "",
+		"badge": "new",
+		"submenu": [
+			{
+				"title": "Товары и услуги",
+				"href": "/products",
+				"badge": ""
+			},
+			{
+				"title": "Доставка и оплата",
+				"href": "/delivery_payment",
+				"badge": ""
+			},
+			{
+				"title": "Опции товаров",
+				"href": "/options",
+				"badge": ""
+			},
+			{
+				"title": "Импорт и экспорт",
+				"href": "/integrations",
+				"badge": ""
+			},
+			{
+				"title": "Настройки продажи",
+				"href": "/sale_settings",
+				"badge": ""
+			}
+		]
+	},
+	{
+		"title": "Управление бюджетом",
+		"icon": "",
+		"badge": "",
+		"submenu": [
+			{
+				"title": "Пополнить баланс",
+				"href": "/recharge_balance",
+				"badge": ""
+			},
+			{
+				"title": "Счета и списания",
+				"href": "/invoices",
+				"badge": ""
+			}
+		]
+	}
+]

@@ -1,5 +1,6 @@
 import React from "react";
 import Clock  from './Clock'
+import CalculatorWater from './CalculatorWater'
 
 class Body extends React.Component {
 
@@ -24,6 +25,8 @@ class Body extends React.Component {
 				<h1>Я тело</h1>
 				{arr_clock}
 				<button onClick={this.addClock.bind(this)}>Добачить часы</button>
+				<hr/>
+				<CalculatorWater/>
 			</div>
 		);
 	}
