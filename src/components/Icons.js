@@ -14,7 +14,6 @@ class Icons extends React.Component {
 	render() {
 		const icon = this.state.icon;
 		if (icon) {
-			// return (<FontAwesomeIcon icon={icon}/>)
 			return (<svg className="main-menu__icon svg-inline--fa"
 									 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="wallet"
 									 role="img" xmlns="http://www.w3.org/2000/svg"

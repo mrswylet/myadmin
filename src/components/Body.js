@@ -1,40 +1,29 @@
-import React from "react";
-import Clock  from './Clock'
-import CalculatorWater from './CalculatorWater'
+import React         from "react";
+import {Route, Switch} from "react-router-dom";
+
+import Page404     from "./Page404";
+import PageOrders  from "./PageOrders";
+import PageClients from "./PageClients";
+
 
 class Body extends React.Component {
 
-	constructor(props){
+	constructor(props) {
 		super(props);
-
-		this.state = {
-			countClock: 1
-		}
 	}
 
 	render() {
-		const counter = this.state.countClock;
-		let arr_clock =[];
 
-		for(let i = 0; i < counter; i++){
-			arr_clock.push(<Clock key={i}/>);
-		}
 
 		return (
 			<div className="body">
-				<h1>Я тело</h1>
-				{arr_clock}
-				<button onClick={this.addClock.bind(this)}>Добачить часы</button>
-				<hr/>
-				<CalculatorWater/>
+				<Switch>
+					<Route path="/clients" exact component={PageClients}/>
+					<Route path="/orders" component={PageOrders}/>
+					<Route component={Page404} />
+				</Switch>
 			</div>
 		);
-	}
-
-	addClock() {
-		this.setState((state, props) => ({
-			countClock: ++state.countClock
-		}));
 	}
 }
 

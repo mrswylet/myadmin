@@ -57,11 +57,16 @@ $global_pr: 15px;
 		background-color: transparent;
 		transition: background-color .25s;
 
+		&_active,
 		&:hover {
 			background-color: $gray-700;
 			transition: background-color .25s;
 			color: $white;
 			text-decoration: none;
+		}
+
+		&_active{
+			font-weight: 400;
 		}
 	}
 

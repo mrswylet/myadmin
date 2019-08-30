@@ -4,7 +4,7 @@ import './scss/style.scss';
 import Header from './components/Header'
 import Menu   from './components/Menu'
 import Body   from './components/Body'
-
+import { BrowserRouter as Router } from "react-router-dom";
 
 class App extends React.Component {
 	constructor(props) {
@@ -14,9 +14,11 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='app'>
-				<Header userName={'Anton'}/>
-				<Menu/>
-				<Body/>
+				<Router>
+					<Header userName={'Anton'}/>
+					<Menu/>
+					<Body/>
+				</Router>
 			</div>
 		);
 	}

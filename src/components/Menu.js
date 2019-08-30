@@ -1,8 +1,8 @@
-import React                    from "react";
-import axios                    from 'axios';
-import { FontAwesomeIcon }      from '@fortawesome/react-fontawesome'
-import { faCoffee, faChartPie } from '@fortawesome/free-solid-svg-icons'
-import Icons                    from "./Icons";
+import React  from "react";
+import axios  from 'axios';
+import Icons  from "./Icons";
+import {NavLink} from "react-router-dom";
+
 
 class Menu extends React.Component {
 	constructor(props) {
@@ -71,10 +71,10 @@ function Sublist(props) {
 
 	const listItems = sublist.map((current_item, index, array) =>
 		<li className="main-menu__item" key={current_item.title}>
-			<a href={current_item.href} className="main-menu__link" title={current_item.title}>
+			<NavLink to={current_item.href} className="main-menu__link" activeClassName="main-menu__link_active" title={current_item.title}>
 				{current_item.title}
 				<span className="badge badge-pill badge-success main-menu__badge">{current_item.badge}</span>
-			</a>
+			</NavLink>
 		</li>
 	);
 
