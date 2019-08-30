@@ -1,21 +1,90 @@
+@mixin header-logo() {
+	width: 55px;
+	height: 55px;
+	border: 2px solid $gray-800;
+	border-radius: 5px;
+}
+
 .header {
 	grid-area: header;
 	color: $white;
 	padding: 0 30px;
 	background-color: $secondary;
+	display: flex;
 
-	&__logo {
-		width: 230px;
-		display: inherit;
-		align-items: inherit;
-		&-img {
-			width: 28px;
-			height: 28px;
+	&__company {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		width: 240px;
+
+		&-logo {
+			@include header-logo();
 		}
-		&-text {
+
+		&-name {
 			margin-left: 13px;
 			font-weight: $font-weight-bold;
 			font-size: 18px;
+		}
+	}
+
+	&__user {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		position: relative;
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			margin-left: 10px;
+		}
+
+		&-logo {
+			@include header-logo();
+		}
+
+		&-name {
+			font-weight: $font-weight-bold;
+		}
+
+		&-id {
+			font-size: $font-size-sm;
+		}
+
+		&-arrow {
+			margin-left: 5px;
+
+			svg {
+				transition: transform .3s ease-in-out;
+			}
+
+			&_open {
+				svg {
+					transform: rotate(180deg);
+					transition: transform .3s ease-in-out;
+				}
+			}
+		}
+
+		&-dropdown {
+			position: absolute;
+			top: 70px;
+			right: 0;
+			width: 200px;
+			background-color: $white;
+			border: 1px solid $gray-200;
+			box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+			padding-top: 3px;
+			padding-bottom: 3px;
+			height: 150px;
+			display: none;
+
+			&_open {
+				display: block;
+			}
 		}
 	}
 
@@ -24,23 +93,28 @@
 		display: inherit;
 		align-items: inherit;
 		height: 100%;
+
 		&-cash {
 			margin-right: 45px;
 			display: flex;
 			align-items: center;
 		}
+
 		&-money {
 			display: inherit;
 			align-items: inherit;
+
 			i {
 				font-size: 21px;
 				line-height: 21px;
 			}
+
 			b {
 				padding-left: 15px;
 				padding-right: 15px;
 				font-size: 1.15rem;
 				font-weight: $font-weight-bold;
+
 				&::after {
 					content: " ₽";
 					display: inline;
@@ -48,11 +122,13 @@
 				}
 			}
 		}
+
 		&-notifications {
 			display: inherit;
 			align-items: inherit;
 			height: 100%;
 		}
+
 		&-system,
 		&-account,
 		&-mall {
@@ -60,12 +136,14 @@
 			height: 100%;
 			display: inherit;
 			align-items: inherit;
+
 			> .badge {
 				position: absolute;
 				top: 13px;
 				left: 22px;
 			}
 		}
+
 		&-ico-link {
 			height: 100%;
 			padding-left: 15px;
@@ -73,27 +151,32 @@
 			cursor: pointer;
 			display: inherit;
 			align-items: inherit;
+
 			> i {
 				font-size: 21px;
 				line-height: 21px;
 			}
 		}
+
 		&-ico-body {
 			position: absolute;
 			top: $header-height + 5px;
 			right: 0;
 			display: none;
 		}
+
 		&-user {
 			margin-left: 30px;
 			height: 100%;
 			position: relative;
+
 			&-link {
 				padding-left: 15px;
 				height: 100%;
 				cursor: pointer;
 				display: flex;
 				align-items: center;
+
 				img {
 					width: 37px;
 					height: 37px;
@@ -101,8 +184,10 @@
 					margin-right: 17px;
 				}
 			}
+
 			&-name {
 				font-weight: $font-weight-bold;
+
 				&:after {
 					content: '\f2f9';
 					display: inline-block;
@@ -113,25 +198,29 @@
 					-moz-osx-font-smoothing: grayscale;
 				}
 			}
+
 			&-id {
 				font-size: 0.85rem;
+
 				&:before {
 					content: 'Ваш ID: ';
 					display: inline;
 				}
 			}
-			&-body{
+
+			&-body {
 				position: absolute;
 				top: 70px;
 				right: 0;
 				width: 200px;
 				background-color: $white;
 				border: 1px solid $gray-200;
-				box-shadow: 0 3px 12px rgba(0,0,0,.05);
+				box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
 				padding-top: 3px;
 				padding-bottom: 3px;
 				display: none;
-				a{
+
+				a {
 					color: $gray-700;
 					text-decoration: none;
 					display: block;
@@ -141,17 +230,20 @@
 					align-items: center;
 					transition: background-color .25s;
 					border-radius: .215rem;
-					i{
+
+					i {
 						margin-right: 20px;
 						font-size: $font-size-lg;
 					}
-					&:hover{
+
+					&:hover {
 						background-color: $gray-100;
 						text-decoration: none;
 						transition: background-color .25s;
 					}
 				}
-				hr{
+
+				hr {
 					margin-top: 5px;
 					margin-bottom: 5px;
 				}
@@ -167,12 +259,14 @@
 		border: 1px solid $gray-200;
 		box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
 	}
+
 	&__header {
 		padding: 20px 20px;
 		border-bottom: 1px solid $gray-200;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		&-title {
 			margin: 0;
 			color: $body-color;
@@ -180,6 +274,7 @@
 			font-weight: 400;
 		}
 	}
+
 	&__footer {
 		background-color: $gray-100;
 		border-top: 1px solid $gray-200;
@@ -187,70 +282,88 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		a {
 			color: $gray-500;
 		}
 	}
+
 	&__list {
-		&-container{
+		&-container {
 			height: 270px;
 		}
+
 		&-item {
 			display: block;
 			padding: 0 20px;
 			transition: background-color .25s;
 			color: $gray-900;
+
 			&:hover {
 				background-color: $gray-100;
 				transition: background-color .25s;
 				text-decoration: none;
 				color: $gray-900;
 			}
+
 			&:first-child > .media {
 				border-top: 0px;
 			}
+
 			> .media {
 				padding: 15px 0;
 				border-top: 1px solid #e4eaec;
 				display: flex;
 				align-items: flex-start;
 			}
+
 			&-time {
 				font-weight: $font-weight-light;
 				color: $gray-600;
 				font-size: $font-size-sm;
 			}
+
 			&-icon {
 				i {
 					font-size: 28px;
 					margin-right: 10px;
+
 					&.blue {
 						color: $blue;
 					}
+
 					&.indigo {
 						color: $indigo;
 					}
+
 					&.purple {
 						color: $purple;
 					}
+
 					&.pink {
 						color: $pink;
 					}
+
 					&.red {
 						color: $red;
 					}
+
 					&.orange {
 						color: $orange;
 					}
+
 					&.yellow {
 						color: $yellow;
 					}
+
 					&.green {
 						color: $green;
 					}
+
 					&.teal {
 						color: $teal;
 					}
+
 					&.cyan {
 						color: $cyan;
 					}

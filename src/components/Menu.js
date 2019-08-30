@@ -1,5 +1,4 @@
 import React  from "react";
-import axios  from 'axios';
 import Icons  from "./Icons";
 import {NavLink} from "react-router-dom";
 
@@ -14,7 +13,7 @@ class Menu extends React.Component {
 	}
 
 	render() {
-		const menu_list = this.state.menu_list;
+		const menu_list = this.props.mainMenuData;
 
 		if (menu_list.length !== 0) {
 			const listItems = menu_list.map((current_item, index, array) =>
@@ -30,13 +29,6 @@ class Menu extends React.Component {
 				<div className='main-menu'>Загрузка данных</div>
 			)
 		}
-	}
-
-	async componentDidMount() {
-		let response = await axios.get('/server/mainMenu.json');
-		const menu_list = response.data;
-
-		this.setState({menu_list})
 	}
 }
 

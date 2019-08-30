@@ -1,4 +1,4 @@
-$global_pl: 60px;
+$global_pl: 55px;
 $global_pr: 15px;
 
 .main-menu {
@@ -29,7 +29,6 @@ $global_pr: 15px;
 		position: absolute;
 		left: calc(#{$global_pl} - 25px);
 		font-size: 80%;
-		line-height: 1.3;
 	}
 
 	&__title {
@@ -72,5 +71,6 @@ $global_pr: 15px;
 
 	&__badge {
 		margin-left: 10px;
+		line-height: 1.3 !important;
 	}
 }
