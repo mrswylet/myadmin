@@ -1,5 +1,8 @@
-import React from "react";
-import axios from 'axios';
+import React                    from "react";
+import axios                    from 'axios';
+import { FontAwesomeIcon }      from '@fortawesome/react-fontawesome'
+import { faCoffee, faChartPie } from '@fortawesome/free-solid-svg-icons'
+import Icons                    from "./Icons";
 
 class Menu extends React.Component {
 	constructor(props) {
@@ -48,7 +51,7 @@ function MenuItem(props) {
 	return (
 		<div className="main-menu__section">
 			<div className="main-menu__header">
-				{menu_item.icon ? (<span className=".main-menu__icon">i</span>) : ''}
+				{menu_item.icon ? (<Icons icon={menu_item.icon}/>) : ''}
 				<span className="main-menu__title">{menu_item.title}</span>
 				<span className="badge badge-pill badge-success main-menu__badge">{menu_item.badge}</span>
 			</div>
@@ -57,13 +60,21 @@ function MenuItem(props) {
 	)
 }
 
+/**
+ *
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 function Sublist(props) {
 	const sublist = props.subMenuList;
 
 	const listItems = sublist.map((current_item, index, array) =>
 		<li className="main-menu__item" key={current_item.title}>
-			<a href={current_item.href} className="main-menu__link" title={current_item.title}>{current_item.title}</a>
-			<span className="badge badge-pill badge-success main-menu__badge">{current_item.badge}</span>
+			<a href={current_item.href} className="main-menu__link" title={current_item.title}>
+				{current_item.title}
+				<span className="badge badge-pill badge-success main-menu__badge">{current_item.badge}</span>
+			</a>
 		</li>
 	);
 

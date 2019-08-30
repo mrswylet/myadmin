@@ -1,7 +1,7 @@
 [
 	{
 		"title": "Мониторинг",
-		"icon": "",
+		"icon": "faChartPie",
 		"badge": "",
 		"submenu": [
 			{
@@ -28,7 +28,7 @@
 	},
 	{
 		"title": "Организация",
-		"icon": "",
+		"icon": "faStore",
 		"badge": "",
 		"submenu": [
 			{
@@ -55,8 +55,8 @@
 	},
 	{
 		"title": "Продажи",
-		"icon": "",
-		"badge": "new",
+		"icon": "faShoppingBasket",
+		"badge": "NEW",
 		"submenu": [
 			{
 				"title": "Товары и услуги",
@@ -87,7 +87,7 @@
 	},
 	{
 		"title": "Управление бюджетом",
-		"icon": "",
+		"icon": "faWallet",
 		"badge": "",
 		"submenu": [
 			{
